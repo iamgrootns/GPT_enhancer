@@ -1,0 +1,2 @@
+runpod
+transformers[torch]
