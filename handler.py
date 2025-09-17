@@ -23,7 +23,7 @@ try:
         "text-generation",
         model="openai/gpt-oss-20b",
         trust_remote_code=True,
-        torch_dtype=torch.float16,
+        torch_dtype=torch.bfloat16,
         device_map="auto"
     )
 
@@ -145,3 +145,4 @@ def handler(event):
 
 # --- Start Serverless Worker ---
 runpod.serverless.start({"handler": handler})
+
