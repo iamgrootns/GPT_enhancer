@@ -3,7 +3,7 @@ import torch
 from transformers import pipeline
 import runpod
 import traceback
-import threading
+
 
 # --- Path for Initialization Error Logging ---
 INIT_ERROR_FILE = "/tmp/init_error.log"
@@ -145,4 +145,5 @@ def handler(event):
 
 # --- Start Serverless Worker ---
 runpod.serverless.start({"handler": handler})
+
 
